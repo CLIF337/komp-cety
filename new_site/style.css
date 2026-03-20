@@ -1,0 +1,1064 @@
+/* ========== Базовые сбросы и переменные ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #111;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #184ed2;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1646bd;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Акцентный цвет (палитра 3 base) */
+.btn-accent, .accent-line, .accent-block, .shape-accent, .about-colored {
+    background-color: #f78300;
+}
+
+.btn-accent {
+    color: #fff !important;
+    border: none;
+    padding: 12px 30px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn-accent:hover {
+    background-color: #de7600;
+    color: #fff !important;
+}
+
+.accent-line {
+    width: 150px;
+    height: 5px;
+    margin: 20px 0;
+}
+
+.accent-block {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ========== Шапка ========== */
+.site-header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Навигация */
+.main-nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #333;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #f78300;
+}
+
+.menu-toggle, .hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    .menu-toggle:checked + .hamburger + .nav-list {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+/* ========== Секция 1: Hero ========== */
+.hero {
+    position: relative;
+    background: #fff;
+    padding: 60px 0;
+}
+
+.shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+}
+
+.shape-dark {
+    background: #2c3e50;
+    top: 0;
+    left: 0;
+}
+
+.shape-accent {
+    bottom: 0;
+    right: 0;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.card-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 20px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* ========== Секция 2: Стратегия ========== */
+/* ========== Секция 2: Стратегия ========== */
+.strategy {
+    background: #f7f7f7;
+    padding: 20px 0 70px;
+}
+
+.strategy-container {
+    position: relative;
+}
+
+
+
+.strategy-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+    margin-bottom: 40px;
+}
+
+.strategy-title {
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.strategy-title h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4.2rem;
+    line-height: 1.05;
+    font-weight: 800;
+    color: #111;
+    word-break: break-word;
+}
+
+.strategy-content {
+    width: 420px;
+    padding-top: 8px;
+}
+
+.strategy-content p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+.strategy-content .credit {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.strategy-content .credit a {
+    color: #184ed2;
+    text-decoration: underline;
+}
+
+.strategy-content .btn-accent {
+    padding: 14px 34px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.strategy-image-wrap {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.strategy-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: block;
+}
+
+.strategy-decor {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95px;
+    height: 210px;
+    background: #f78300;
+    z-index: 1;
+}
+
+.strategy-decor-left {
+    left: -60px;
+}
+
+.strategy-decor-right {
+    right: -60px;
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+    .strategy-row {
+        gap: 40px;
+    }
+
+    .strategy-title h2 {
+        font-size: 3.2rem;
+    }
+
+    .strategy-content {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .strategy-image-wrap {
+        max-width: 680px;
+    }
+
+    .strategy-decor {
+        width: 70px;
+        height: 170px;
+    }
+
+    .strategy-decor-left {
+        left: -35px;
+    }
+
+    .strategy-decor-right {
+        right: -35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .strategy {
+        padding: 20px 0 50px;
+    }
+
+    .strategy-top-line {
+        margin-bottom: 30px;
+    }
+
+    .strategy-row {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .strategy-title,
+    .strategy-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .strategy-title h2 {
+        font-size: 2.6rem;
+        line-height: 1.1;
+        word-break: normal;
+    }
+
+    .strategy-decor {
+        display: none;
+    }
+}
+
+/* ========== Секция 3: Курсы ========== */
+.courses {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.course-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.course-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.credit-light a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ========== Секция 4: Карьера ========== */
+.career {
+    padding: 60px 0;
+    background: #cccccca2;
+}
+
+.section-title-left {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.career-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.career-item {
+    background: #fff;
+    padding: 30px 30px 30px 50px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.career-item h5 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* ========== Секция 5: Учителя ========== */
+.teachers {
+    padding: 60px 0;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.teacher-block, .goal-block {
+    padding: 20px;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #f78300;
+    background-size: cover;
+    background-position: center;
+    margin: 20px 0;
+}
+
+.teacher-block .circle-image {
+    margin-left: 0;
+}
+
+.goal-block .circle-image {
+    margin-left: auto;
+}
+
+.teacher-block h6,
+.goal-block h6 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.teacher-block h6 {
+    text-align: left;
+}
+
+.goal-block h6 {
+    text-align: right;
+}
+/* ========== Секция 6: О нас ========== */
+.about {
+    background: #e8e8e8;
+    padding: 60px 0 80px;
+}
+
+.about-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Верхняя часть: декор + картинка --- */
+.about-top {
+    position: relative;
+    margin-bottom: -40px; /* картинка наезжает на нижний блок */
+}
+
+.about-decor-top {
+    position: absolute;
+    top: -30px;
+    left: 57%;
+    transform: translateX(-70%);
+    width: 700px;
+    height: 400px;
+    background: #f78300;
+    z-index: 1;
+}
+
+.about-image {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 85%;
+    max-width: 750px;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* --- Нижняя часть: оранжевый блок + текст --- */
+.about-bottom {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: 3;
+}
+
+.about-colored {
+    width: 280px;
+    min-height: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+}
+
+.about-colored h3 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+.about-text {
+    background: #fff;
+    padding: 40px 40px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text .credit {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.about-text .credit a {
+    color: #184ed2;
+    text-decoration: underline;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 992px) {
+    .about-wrapper {
+        max-width: 100%;
+    }
+
+    .about-decor-top {
+        width: 350px;
+        height: 100px;
+        top: -25px;
+    }
+
+    .about-image {
+        width: 90%;
+    }
+
+    .about-colored {
+        width: 220px;
+        min-height: 180px;
+    }
+
+    .about-colored h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 0 60px;
+    }
+
+    .about-top {
+        margin-bottom: 0;
+    }
+
+    .about-decor-top {
+        width: 250px;
+        height: 80px;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-60%);
+    }
+
+    .about-image {
+        width: 95%;
+    }
+
+    .about-bottom {
+        flex-direction: column;
+    }
+
+    .about-colored {
+        width: 100%;
+        min-height: 120px;
+        padding: 30px 20px;
+    }
+
+    .about-colored h3 {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-decor-top {
+        width: 180px;
+        height: 60px;
+        top: -15px;
+    }
+
+    .about-colored h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ========== Секция 7: Цитата ========== */
+.quote {
+    padding: 60px 0;
+}
+
+.quote-row {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.quote-left {
+    flex: 1.5;
+}
+
+.quote-right {
+    flex: 1;
+}
+
+.quote-emphasis {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* ========== Секция 8: Разработка игр ========== */
+.game-dev {
+    padding: 80px 0 100px;
+    background: #e8e8e8;
+}
+
+.game-dev-wrapper {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    min-height: 700px;
+}
+
+/* --- Оранжевые декоративные блоки --- */
+.game-decor-top {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 300px;
+    height: 130px;
+    background: #f78300;
+    z-index: 1;
+}
+
+.game-decor-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    width: 120px;
+    height: 280px;
+    background: #f78300;
+    z-index: 1;
+}
+
+/* --- Картинка --- */
+.game-image-wrap {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    right: 0;
+    z-index: 2;
+}
+
+.game-main-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    max-height: 550px;
+}
+
+/* --- Белый блок с текстом (наложен слева) --- */
+.game-text-overlay {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 340px;
+    background: #fff;
+    padding: 40px 35px;
+    z-index: 3;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.game-text-overlay h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.game-text-overlay .credit {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.game-text-overlay .credit a {
+    color: #184ed2;
+    text-decoration: underline;
+}
+
+/* --- Сетка иконок 2×2 (наложена справа-снизу) --- */
+.icon-grid-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 380px;
+    z-index: 3;
+}
+
+.icon-card {
+    background: #fff;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.icon-card svg {
+    width: 50px;
+    height: 50px;
+    fill: #f78300;
+    margin-bottom: 12px;
+}
+
+.icon-card h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 992px) {
+    .game-dev-wrapper {
+        min-height: 600px;
+    }
+
+    .game-decor-top {
+        width: 240px;
+        height: 100px;
+        right: 40px;
+    }
+
+    .game-decor-bottom {
+        width: 100px;
+        height: 220px;
+        left: 40px;
+    }
+
+    .game-image-wrap {
+        top: 30px;
+        left: 100px;
+    }
+
+    .game-text-overlay {
+        width: 300px;
+        top: 100px;
+        padding: 30px 25px;
+    }
+
+    .game-text-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .icon-grid-overlay {
+        width: 320px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-dev {
+        padding: 40px 0 60px;
+    }
+
+    .game-dev-wrapper {
+        min-height: auto;
+        position: relative;
+    }
+
+    /* Убираем абсолютное позиционирование, ставим всё в поток */
+    .game-decor-top,
+    .game-decor-bottom {
+        display: none;
+    }
+
+    .game-image-wrap {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin-bottom: 30px;
+    }
+
+    .game-main-image {
+        max-height: none;
+    }
+
+    .game-text-overlay {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .game-text-overlay h3 {
+        font-size: 1.3rem;
+    }
+
+    .icon-grid-overlay {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-grid-overlay {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .icon-card {
+        padding: 20px 15px;
+    }
+}
+/* ========== Секция 9: Контакты ========== */
+.contact {
+    padding: 60px 0;
+}
+
+.contact-row {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f78300;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    background: #f5f5f5;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+/* ========== Футер ========== */
+.site-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ========== Общая адаптивность ========== */
+@media (max-width: 992px) {
+    .cards {
+        margin-top: -40px;
+    }
+    .teachers-grid {
+        grid-template-columns: 1fr;
+    }
+    .quote-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .strategy-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .game-row {
+        flex-direction: column;
+    }
+    .contact-row {
+        flex-direction: column;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .hero
+    {
+        margin-top: 192px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%;
+    }
+    .section-title-left {
+        font-size: 2rem;
+    }
+}
+/* ========== Кнопка «Наверх» ========== */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #f78300;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #de7600;
+}
+
+.scroll-top svg {
+    width: 24px;
+    height: 24px;
+}
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Отступ сверху, чтобы меню не перекрывало якоря */
+}
